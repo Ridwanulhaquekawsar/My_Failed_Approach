@@ -72,3 +72,4 @@ int main(){
 
 Note: 
   • My code is failed cause i choosed nearest possible element alternating the contigous element from end so this the wrong from my end cause if i choose nearest then the nerest all removal is extra operation if other end contain contigous element 🙂🧑‍💻
+  • My code is not made best decision here, cause variable size sliding window has made best decision here 😎🧑‍💻
