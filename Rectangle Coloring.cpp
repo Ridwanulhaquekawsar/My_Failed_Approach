@@ -126,11 +126,15 @@ void solve(){
     if(g >= w) la_w++;  
     if(b >= w) la_w++;  
   
-  
+    if( ( (r == 2 * l && g == w) || (r == 2 * w && g == l) ) || ( (g == 2 * l && r == w) || (g == 2 * w && r == l) ) || ( (b == 2 * l && r == w) || (b == 2 * w && r == l) ) ){
+        out(4);
+        return;
+    }
+      
     if(e_w == 2) out(4);  
-    else if(le_w == 2) ( (2 * min({r, g, b}) == w) || (2 * min({r, g, b}) == l) ) ? out(5) : out(6);
+    else if(le_w == 2) ( (2 * min({r, g, b}) == w) ) ? out(5) : out(6);
     else if(le_w == 1) (c_lw == 1) ? out(5) : out(6);  
-    else if(la_w == 3) (c_l >= 1 && c_lw >= 1) ? out(4) : out(5);
+    else if(la_w == 3) (c_l >= 1 && c_lw >= 1) ? out(4) : (c_l >= 1 || c_lw >= 1 ? out(5) : out(6) );
 }
 
 int main(){
