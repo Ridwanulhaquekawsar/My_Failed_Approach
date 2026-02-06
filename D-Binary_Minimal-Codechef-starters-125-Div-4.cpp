@@ -159,3 +159,47 @@ int main(){
     in T;
     while(T--) solve();
 }
+
+
+Another Approach : 
+
+ll T;
+ll n, k;
+S s;
+S tmp, ans;
+
+void solve(){
+    in n >> k >> s;
+    
+    if(k == 0) out(s);
+    else{
+        tmp = "";
+        
+        rep(i, n){
+            if(k > 0 && s[i] == '0'){
+                tmp += '0';
+            }
+            else if(s[i] == '1') k--;
+        }
+        
+        if(k > 0){
+            ans = "";
+            
+            rep(i, sz(tmp) ){
+                if(k == 0) ans += '0';
+                else k--;
+            }
+            
+            out(ans);
+        }
+        else out(tmp);
+    }
+}
+
+int main(){
+    FastIO(); 
+    
+    T = 1;
+    in T;
+    while(T--) solve();
+}
