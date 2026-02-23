@@ -169,3 +169,32 @@ int main(){
     in T;
     while(T--) solve();
 }
+
+
+    
+Another Approach : 👇
+
+
+
+ll T;
+ll n, k;
+S s, t;
+ll c;
+
+void solve(){
+    in n >> k >> s >> t;
+    
+    c = 0;
+    
+    f(n) if(s[i] != t[i]) c++;
+    
+    (k >= c/2 && n > 2) ? YES : NO;
+}
+
+int main(){
+    FastIO(); 
+    
+    T = 1;
+    in T;
+    while(T--) solve();
+}
